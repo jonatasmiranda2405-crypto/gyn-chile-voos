@@ -6,7 +6,7 @@
 <title>Painel GYN Chile</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Barlow:wght@400;500;600&display=swap">
 <style>
-/* Layout: faixa da rota, resumo GYN x BSB, ofertas de Goiânia (base), ofertas de Brasília (referência), histórico. */
+/* Layout: faixa da rota com formulário, resumo origem x comparação, ofertas da origem (base), ofertas da comparação (referência), histórico. */
 :root{
   --bg:#edf0f3;--surface:#fff;--ink:#14202b;--muted:#566574;--line:#d3dae1;
   --accent:#0f6b7a;--accent-ink:#fff;--ok:#1c7a46;--warn:#a15c00;--chip:#e1e8ee;
@@ -55,45 +55,60 @@ a:focus-visible{outline:3px solid var(--warn);outline-offset:2px}
 .sellers{min-width:170px}
 .seller{display:flex;justify-content:space-between;gap:12px;font-size:.85rem}
 td.sellers .sub{display:block}
+form.params{align-items:flex-end}
+.params label{display:flex;flex-direction:column;gap:3px;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.params input{font:500 .95rem var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:6px 8px;min-width:0}
+.params input.code{width:5.2em;text-transform:uppercase}
+.params input.num{width:4.5em}
+.params input:focus-visible,button.btn:focus-visible{outline:3px solid var(--warn);outline-offset:2px}
+button.btn{font:600 .9rem var(--body);background:var(--accent);color:var(--accent-ink);border:0;border-radius:4px;padding:8px 18px;cursor:pointer}
+button.btn:disabled{opacity:.6;cursor:wait}
+.hint{color:var(--muted);font-size:.8rem;margin:0}
 </style>
 </head>
 <body>
 <div class="wrap">
   <section class="route">
-    <div class="codes"><div>GYN<small>Goiânia · Santa Genoveva</small></div><span class="arrow">→</span><div>SCL<small>Santiago · Arturo Merino Benítez</small></div></div>
-    <div class="params">
-      <span class="chip" id="c-date">—</span><span class="chip" id="c-after">—</span><span class="chip">Só ida</span><span class="chip">1 adulto</span><span class="chip">Conexões aceitas</span>
-      <a class="btn ghost" id="edit-cfg" target="_blank" rel="noopener" href="https://github.com/jonatasmiranda2405-crypto/gyn-chile-voos/edit/main/site/config.json">Alterar data e horário</a>
-    </div>
+    <div class="codes"><div><span id="h-from">GYN</span><small id="h-from-n">Goiânia · Santa Genoveva</small></div><span class="arrow">→</span><div><span id="h-to">SCL</span><small id="h-to-n">Santiago · Arturo Merino Benítez</small></div></div>
+    <form class="params" id="f" autocomplete="off">
+      <label>Origem<input class="code" id="f-from" maxlength="3" required></label>
+      <label>Destino<input class="code" id="f-to" maxlength="3" required></label>
+      <label>Data (só ida)<input type="date" id="f-date" required></label>
+      <label>Saída a partir de<input type="time" id="f-after" required></label>
+      <label>Adultos<input class="num" type="number" id="f-adults" min="1" max="9" value="1"></label>
+      <label>Comparar com<input class="code" id="f-cmp" maxlength="3" placeholder="opcional"></label>
+      <button class="btn" id="f-go" type="submit">Buscar</button>
+    </form>
   </section>
+  <p class="hint">Use o código do aeroporto com 3 letras (GYN, BSB, GRU, SCL…). Conexões aceitas, classe econômica.</p>
 
   <div class="status" id="status"></div>
   <p class="foot" id="status-q"></p>
 
   <section class="tiles">
-    <div class="tile base"><span class="k">Goiânia · menor preço</span><span class="v mono" id="t-gyn">—</span><span class="n" id="t-gyn-n"></span></div>
-    <div class="tile"><span class="k">Brasília · menor preço</span><span class="v mono" id="t-bsb">—</span><span class="n" id="t-bsb-n"></span></div>
-    <div class="tile"><span class="k">Diferença</span><span class="v mono" id="t-diff">—</span><span class="n" id="t-diff-n">Não inclui o deslocamento Goiânia–Brasília (cerca de 200 km)</span></div>
+    <div class="tile base"><span class="k" id="k-from">Origem · menor preço</span><span class="v mono" id="t-gyn">—</span><span class="n" id="t-gyn-n"></span></div>
+    <div class="tile"><span class="k" id="k-cmp">Comparação · menor preço</span><span class="v mono" id="t-bsb">—</span><span class="n" id="t-bsb-n"></span></div>
+    <div class="tile"><span class="k">Diferença</span><span class="v mono" id="t-diff">—</span><span class="n" id="t-diff-n"></span></div>
   </section>
 
   <section class="panel">
-    <h2>Saindo de Goiânia (GYN)</h2>
+    <h2 id="h2-from">Saindo de Goiânia (GYN)</h2>
     <div class="scroll" id="gyn"></div>
   </section>
 
-  <section class="panel">
-    <h2>Saindo de Brasília (BSB) · referência</h2>
+  <section class="panel" id="p-cmp">
+    <h2 id="h2-cmp">Saindo de Brasília (BSB) · referência</h2>
     <div class="scroll" id="bsb"></div>
   </section>
 
   <section class="panel">
     <h2>Outros sites</h2>
     <div class="links" id="agg"></div>
-    <p class="foot">Os preços mudam em minutos. Confirme o valor final, com bagagem, no site da companhia antes de comprar. Ao mudar a data ou o horário, salve o arquivo no GitHub: o site é atualizado em cerca de 1 minuto.</p>
+    <p class="foot">Os preços mudam em minutos. Confirme o valor final, com bagagem, no site da companhia antes de comprar. Resultados de uma mesma busca ficam guardados por 6 horas.</p>
   </section>
 
-  <section class="panel">
-    <h2>Histórico</h2>
+  <section class="panel" id="p-hist">
+    <h2>Histórico (busca padrão)</h2>
     <div class="scroll"><table style="min-width:420px"><thead><tr><th>Verificação</th><th>Goiânia</th><th>Brasília</th></tr></thead><tbody id="hist"></tbody></table></div>
   </section>
 </div>
@@ -139,34 +154,84 @@ td.sellers .sub{display:block}
   }
   function min(r){return r&&r.status==='ok'&&r.offers.length?r.offers[0]:null}
 
+  var AP={GYN:'Goiânia · Santa Genoveva',BSB:'Brasília · Juscelino Kubitschek',SCL:'Santiago · Arturo Merino Benítez',GRU:'São Paulo · Guarulhos',CGH:'São Paulo · Congonhas',VCP:'Campinas · Viracopos',GIG:'Rio de Janeiro · Galeão',SDU:'Rio de Janeiro · Santos Dumont',CNF:'Belo Horizonte · Confins',SSA:'Salvador',REC:'Recife',FOR:'Fortaleza',POA:'Porto Alegre',CWB:'Curitiba',FLN:'Florianópolis',EZE:'Buenos Aires · Ezeiza',AEP:'Buenos Aires · Aeroparque',LIM:'Lima',BOG:'Bogotá',PTY:'Cidade do Panamá',MIA:'Miami',MAD:'Madri',LIS:'Lisboa',MVD:'Montevidéu',ASU:'Assunção'};
   var DIAS=['dom','seg','ter','qua','qui','sex','sáb'];
   function fmtDate(iso){var p=iso.split('-');var dt=new Date(Date.UTC(+p[0],+p[1]-1,+p[2]));return DIAS[dt.getUTCDay()]+' '+p[2]+'/'+p[1]+'/'+p[0]}
-  function links(cfg){
-    var d=cfg.date,c=d.replace(/-/g,''),y=c.slice(2),out=[];
-    (cfg.origins||['GYN','BSB']).forEach(function(o){
-      out.push({name:'Skyscanner '+o,url:'https://www.skyscanner.com.br/transporte/passagens-aereas/'+o.toLowerCase()+'/scl/'+y+'/?adultsv2=1&cabinclass=economy&rtn=0'});
-      out.push({name:'Kayak '+o,url:'https://www.kayak.com.br/flights/'+o+'-SCL/'+d+'?sort=bestflight_a'});
-      out.push({name:'Decolar '+o,url:'https://www.decolar.com/shop/flights/results/oneway/'+o+'/SCL/'+d+'/1/0/0'});
+  function cityOf(c){var n=AP[c];return n?n.split(' · ')[0]:c}
+  function links(q){
+    var d=q.date,c=d.replace(/-/g,''),y=c.slice(2),out=[];
+    [q.from].concat(q.cmp?[q.cmp]:[]).forEach(function(o){
+      var l=o.toLowerCase(),t=q.to.toLowerCase();
+      out.push({name:'Skyscanner '+o,url:'https://www.skyscanner.com.br/transporte/passagens-aereas/'+l+'/'+t+'/'+y+'/?adultsv2='+q.adults+'&cabinclass=economy&rtn=0'});
+      out.push({name:'Kayak '+o,url:'https://www.kayak.com.br/flights/'+o+'-'+q.to+'/'+d+'/'+q.adults+'adults?sort=bestflight_a'});
+      out.push({name:'Decolar '+o,url:'https://www.decolar.com/shop/flights/results/oneway/'+o+'/'+q.to+'/'+d+'/'+q.adults+'/0/0'});
     });
     return out}
-  var DEF={date:'2026-12-11',after:'19:30',origins:['GYN','BSB']};
-  fetch('config.json?'+Date.now()).then(function(r){return r.json()}).catch(function(){return DEF}).then(function(cfg){
-    $('c-date').textContent=fmtDate(cfg.date);$('c-after').textContent='Saída a partir de '+cfg.after;
-    links(cfg).forEach(function(x){var a=el('a','btn ghost',x.name);a.href=x.url;a.target='_blank';a.rel='noopener';$('agg').appendChild(a)});
-    return fetch('data.json?'+Date.now());
-  }).then(function(r){return r.json()}).then(function(d){
-    var g=d.routes.GYN,b=d.routes.BSB,mg=min(g),mb=min(b);
-    if(d.query&&d.updated)$('status-q').textContent='Busca feita para '+fmtDate(d.query.date)+', saída a partir de '+d.query.after+'.';
-    var st=$('status');st.className='status'+(mg?' ok':'');
-    st.appendChild(el('b',null,mg?'Menor preço saindo de Goiânia: '+brl(mg.price)+' ('+mg.airline+')':'Ainda sem preço para a data escolhida'));
-    st.appendChild(el('span',null,d.updated?'Atualizado em '+when(d.updated)+'.':(d.message||'')));
+
+  var DEF={date:'2026-12-11',after:'19:30',from:'GYN',to:'SCL',cmp:'BSB',adults:1,api:''};
+  var CFG=DEF,STATIC=null;
+  function setHeader(q){
+    $('h-from').textContent=q.from;$('h-to').textContent=q.to;
+    $('h-from-n').textContent=AP[q.from]||'';$('h-to-n').textContent=AP[q.to]||'';
+    $('h2-from').textContent='Saindo de '+cityOf(q.from)+' ('+q.from+')';
+    $('h2-cmp').textContent='Saindo de '+cityOf(q.cmp)+' ('+q.cmp+') · referência';
+    $('p-cmp').style.display=q.cmp?'':'none';
+    $('k-from').textContent=q.from+' · menor preço';$('k-cmp').textContent=(q.cmp||'Comparação')+' · menor preço';
+    $('t-diff-n').textContent=(q.from==='GYN'&&q.cmp==='BSB')?'Não inclui o deslocamento Goiânia–Brasília (cerca de 200 km)':'';
+    document.title=q.from+' → '+q.to+' · '+fmtDate(q.date);
+    var a=$('agg');a.textContent='';links(q).forEach(function(x){var e=el('a','btn ghost',x.name);e.href=x.url;e.target='_blank';e.rel='noopener';a.appendChild(e)});
+  }
+  function clearResults(){['t-gyn','t-bsb','t-diff'].forEach(function(i){$(i).textContent='—'});['t-gyn-n','t-bsb-n'].forEach(function(i){$(i).textContent=''});$('gyn').textContent='';$('bsb').textContent='';}
+  function show(q,g,b,info){
+    clearResults();setHeader(q);
+    var mg=min(g),mb=min(b),st=$('status');st.textContent='';st.className='status'+(mg?' ok':'');
+    st.appendChild(el('b',null,mg?'Menor preço saindo de '+cityOf(q.from)+': '+brl(mg.price)+' ('+mg.airline+')':'Nenhum voo com preço para essa busca'));
+    if(info)st.appendChild(el('span',null,info));
     if(!mg&&g&&g.message)st.appendChild(el('span',null,g.message));
+    $('status-q').textContent='Busca feita para '+fmtDate(q.date)+', saída a partir de '+q.after+', '+q.adults+' adulto'+(q.adults>1?'s':'')+'.';
     if(mg){$('t-gyn').textContent=brl(mg.price);$('t-gyn-n').textContent=mg.airline+' · saída '+mg.dep.slice(11)}
     if(mb){$('t-bsb').textContent=brl(mb.price);$('t-bsb-n').textContent=mb.airline+' · saída '+mb.dep.slice(11)}
-    if(mg&&mb){var df=mb.price-mg.price;$('t-diff').textContent=(df<0?'−':'+')+brl(Math.abs(df))+(df<0?' em Brasília':' em Goiânia')}
-    render($('gyn'),g,g&&g.google_flights_url);render($('bsb'),b,b&&b.google_flights_url);
-    (d.history||[]).slice(-20).reverse().forEach(function(h){var tr=el('tr');tr.appendChild(el('td','mono',when(h.when)));tr.appendChild(el('td','price',h.GYN!=null?brl(h.GYN):'—'));tr.appendChild(el('td','price',h.BSB!=null?brl(h.BSB):'—'));$('hist').appendChild(tr)});
-  }).catch(function(){$('status').appendChild(el('b',null,'Não foi possível carregar data.json'))});
+    if(mg&&mb){var df=mb.price-mg.price;$('t-diff').textContent=(df<0?'−':'+')+brl(Math.abs(df))+(df<0?' em '+cityOf(q.cmp):' em '+cityOf(q.from))}
+    render($('gyn'),g,g&&g.google_flights_url);if(q.cmp)render($('bsb'),b,b&&b.google_flights_url);
+  }
+  function fillForm(q){$('f-from').value=q.from;$('f-to').value=q.to;$('f-date').value=q.date;$('f-after').value=q.after;$('f-adults').value=q.adults;$('f-cmp').value=q.cmp||''}
+  function readForm(){return{from:$('f-from').value.trim().toUpperCase(),to:$('f-to').value.trim().toUpperCase(),date:$('f-date').value,after:$('f-after').value||'00:00',adults:Math.max(1,Math.min(9,parseInt($('f-adults').value,10)||1)),cmp:$('f-cmp').value.trim().toUpperCase()}}
+  function qs(q){return 'from='+q.from+'&to='+q.to+'&date='+q.date+'&after='+q.after+'&adults='+q.adults+(q.cmp?'&cmp='+q.cmp:'')}
+  function same(q){return STATIC&&STATIC.query&&q.from==='GYN'&&q.to==='SCL'&&q.cmp==='BSB'&&q.adults===1&&q.date===STATIC.query.date&&q.after===STATIC.query.after}
+  function showStatic(q){var d=STATIC;show(q,d.routes.GYN,d.routes.BSB,d.updated?'Atualizado em '+when(d.updated)+'.':(d.message||''));
+    $('p-hist').style.display='';$('hist').textContent='';
+    (d.history||[]).slice(-20).reverse().forEach(function(h){var tr=el('tr');tr.appendChild(el('td','mono',when(h.when)));tr.appendChild(el('td','price',h.GYN!=null?brl(h.GYN):'—'));tr.appendChild(el('td','price',h.BSB!=null?brl(h.BSB):'—'));$('hist').appendChild(tr)})}
+  function api(q,from,sellers){
+    var u=CFG.api.replace(/\/$/,'')+'/search?from='+from+'&to='+q.to+'&date='+q.date+'&after='+q.after+'&adults='+q.adults+'&sellers='+sellers;
+    return fetch(u).then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.error||'Erro na busca');return j})})}
+  function search(q){
+    try{history.replaceState(null,'','?'+qs(q))}catch(e){}
+    if(same(q)){showStatic(q);return Promise.resolve()}
+    $('p-hist').style.display='none';
+    if(!CFG.api){setHeader(q);clearResults();var st=$('status');st.textContent='';st.className='status';st.appendChild(el('b',null,'A busca ao vivo ainda não está ativada neste site.'));st.appendChild(el('span',null,'Enquanto isso, use os botões de "Outros sites" abaixo, já preenchidos com a sua busca.'));return Promise.resolve()}
+    var go=$('f-go');go.disabled=true;go.textContent='Buscando…';
+    var st=$('status');st.className='status';st.textContent='';st.appendChild(el('b',null,'Buscando preços…'));
+    return Promise.all([api(q,q.from,2),q.cmp?api(q,q.cmp,0):Promise.resolve(null)]).then(function(r){
+      var g=Object.assign({status:'ok',message:''},r[0]),b=r[1]&&Object.assign({status:'ok',message:''},r[1]);
+      show(q,g,b,'Atualizado em '+when(r[0].updated)+(r[0].cached?' (resultado guardado, até 6 h)':'')+'.');
+    }).catch(function(e){setHeader(q);clearResults();st.textContent='';st.appendChild(el('b',null,'Não foi possível buscar agora'));st.appendChild(el('span',null,String(e.message||e)))}).then(function(){go.disabled=false;go.textContent='Buscar'});
+  }
+  $('f').addEventListener('submit',function(e){e.preventDefault();var q=readForm();
+    if(!/^[A-Z]{3}$/.test(q.from)||!/^[A-Z]{3}$/.test(q.to)||q.from===q.to||(q.cmp&&!/^[A-Z]{3}$/.test(q.cmp))){alert('Use códigos de aeroporto com 3 letras, origem diferente do destino.');return}
+    if(!q.date){alert('Escolha a data.');return}
+    search(q)});
+
+  function boot(){
+    var p=new URLSearchParams(location.search),q={from:CFG.from,to:CFG.to,date:CFG.date,after:CFG.after,adults:CFG.adults,cmp:CFG.cmp};
+    if(p.get('from'))q.from=p.get('from').toUpperCase().slice(0,3);if(p.get('to'))q.to=p.get('to').toUpperCase().slice(0,3);
+    if(/^\d{4}-\d{2}-\d{2}$/.test(p.get('date')||''))q.date=p.get('date');if(/^\d{2}:\d{2}$/.test(p.get('after')||''))q.after=p.get('after');
+    if(p.get('adults'))q.adults=Math.max(1,Math.min(9,parseInt(p.get('adults'),10)||1));if(p.has('cmp'))q.cmp=(p.get('cmp')||'').toUpperCase().slice(0,3);
+    fillForm(q);search(q);
+  }
+  fetch('config.json?'+Date.now()).then(function(r){return r.json()}).catch(function(){return {}}).then(function(c){
+    CFG=Object.assign({},DEF,c,{from:(c.origins&&c.origins[0])||DEF.from,cmp:(c.origins&&c.origins[1])||DEF.cmp,adults:1});
+    return fetch('data.json?'+Date.now()).then(function(r){return r.json()}).catch(function(){return null})
+  }).then(function(d){STATIC=d;boot()});
 })();
 </script>
 </body>
