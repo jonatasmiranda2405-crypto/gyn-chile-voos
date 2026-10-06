@@ -1,0 +1,3 @@
+name = "gyn-chile-voos-api"
+main = "worker.js"
+compatibility_date = "2025-01-01"
