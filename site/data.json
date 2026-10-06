@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-06T15:22:01+00:00",
+  "updated": "2026-10-06T15:31:21+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -14,7 +14,53 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 430,
-          "price": 1142
+          "price": 1142,
+          "sellers": [
+            {
+              "seller": "Booking.com",
+              "price": 1118
+            },
+            {
+              "seller": "Flightnetwork",
+              "price": 1137
+            },
+            {
+              "seller": "Mytrip",
+              "price": 1139
+            },
+            {
+              "seller": "LATAM",
+              "price": 1142
+            },
+            {
+              "seller": "Decolar",
+              "price": 1185
+            },
+            {
+              "seller": "Expedia",
+              "price": 1191
+            },
+            {
+              "seller": "maxmilhas",
+              "price": 1193
+            },
+            {
+              "seller": "Zupper",
+              "price": 1193
+            },
+            {
+              "seller": "Trip.com",
+              "price": 1202
+            },
+            {
+              "seller": "ViajaNet",
+              "price": 1210
+            },
+            {
+              "seller": "123Milhas",
+              "price": 1213
+            }
+          ]
         }
       ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDR1lOcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
@@ -68,6 +114,17 @@
       "when": "2026-10-06T15:22:01+00:00",
       "GYN": 1142,
       "BSB": 4117
+    },
+    {
+      "when": "2026-10-06T15:31:21+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1142,
+      "BSB": 4117
     }
-  ]
+  ],
+  "query": {
+    "date": "2026-12-11",
+    "after": "19:30"
+  }
 }
