@@ -1,16 +1,40 @@
 {
-  "updated": null,
-  "message": "Falta o segredo SERPAPI_KEY no repositório (Settings > Secrets and variables > Actions).",
+  "updated": "2026-10-06T15:22:01+00:00",
+  "message": "",
   "routes": {
     "GYN": {
-      "status": "pending",
-      "message": "Falta o segredo SERPAPI_KEY no repositório (Settings > Secrets and variables > Actions).",
-      "offers": []
+      "status": "ok",
+      "message": "",
+      "offers": [
+        {
+          "airline": "LATAM",
+          "flights": "LA 3545 LA 763",
+          "dep": "2026-12-11 19:45",
+          "arr": "2026-12-12 02:55",
+          "stops": 1,
+          "via": "GRU",
+          "duration_min": 430,
+          "price": 1142
+        }
+      ],
+      "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDR1lOcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
     },
     "BSB": {
-      "status": "pending",
-      "message": "Falta o segredo SERPAPI_KEY no repositório (Settings > Secrets and variables > Actions).",
-      "offers": []
+      "status": "ok",
+      "message": "",
+      "offers": [
+        {
+          "airline": "Gol + Turkish Airlines",
+          "flights": "G3 1459 TK 215",
+          "dep": "2026-12-11 21:35",
+          "arr": "2026-12-12 10:00",
+          "stops": 1,
+          "via": "GRU",
+          "duration_min": 745,
+          "price": 4117
+        }
+      ],
+      "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
     }
   },
   "aggregators": [
@@ -39,5 +63,11 @@
       "url": "https://www.decolar.com/shop/flights/results/oneway/BSB/SCL/2026-12-11/1/0/0"
     }
   ],
-  "history": []
+  "history": [
+    {
+      "when": "2026-10-06T15:22:01+00:00",
+      "GYN": 1142,
+      "BSB": 4117
+    }
+  ]
 }
