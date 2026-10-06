@@ -1,0 +1,17 @@
+{
+  "updated": null,
+  "message": "Aguardando a primeira execução da rotina.",
+  "routes": {
+    "GYN": {"status": "pending", "message": "Aguardando a primeira execução da rotina.", "offers": []},
+    "BSB": {"status": "pending", "message": "Aguardando a primeira execução da rotina.", "offers": []}
+  },
+  "aggregators": [
+    {"name": "Skyscanner GYN", "url": "https://www.skyscanner.com.br/transporte/passagens-aereas/gyn/scl/261211/?adultsv2=1&cabinclass=economy&rtn=0"},
+    {"name": "Kayak GYN", "url": "https://www.kayak.com.br/flights/GYN-SCL/2026-12-11?sort=bestflight_a"},
+    {"name": "Decolar GYN", "url": "https://www.decolar.com/shop/flights/results/oneway/GYN/SCL/2026-12-11/1/0/0"},
+    {"name": "Skyscanner BSB", "url": "https://www.skyscanner.com.br/transporte/passagens-aereas/bsb/scl/261211/?adultsv2=1&cabinclass=economy&rtn=0"},
+    {"name": "Kayak BSB", "url": "https://www.kayak.com.br/flights/BSB-SCL/2026-12-11?sort=bestflight_a"},
+    {"name": "Decolar BSB", "url": "https://www.decolar.com/shop/flights/results/oneway/BSB/SCL/2026-12-11/1/0/0"}
+  ],
+  "history": []
+}
