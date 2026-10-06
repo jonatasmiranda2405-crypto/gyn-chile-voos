@@ -2,5 +2,6 @@
   "date": "2026-12-11",
   "after": "19:30",
   "origins": ["GYN", "BSB"],
-  "booking_options": {"GYN": 2, "BSB": 0}
+  "booking_options": {"GYN": 2, "BSB": 0},
+  "api": "https://gyn-chile-voos-api.jonatasmiranda2405.workers.dev"
 }
