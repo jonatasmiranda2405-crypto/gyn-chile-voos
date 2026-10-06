@@ -2,11 +2,20 @@ name: Atualizar preços e publicar
 
 on:
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "17 */12 * * *"
   workflow_dispatch:
+    inputs:
+      flight_date:
+        description: "Data do voo (AAAA-MM-DD). Vazio usa site/config.json"
+        required: false
+        default: ""
+      after:
+        description: "Saída a partir de (HH:MM). Vazio usa site/config.json"
+        required: false
+        default: ""
   push:
     branches: [main]
-    paths: ["site/index.html", "scripts/**", ".github/workflows/**"]
+    paths: ["site/index.html", "site/config.json", "scripts/**", ".github/workflows/**"]
 
 permissions:
   contents: write
@@ -28,8 +37,8 @@ jobs:
       - name: Buscar preços
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
-          FLIGHT_DATE: "2026-12-11"
-          AFTER: "19:30"
+          FLIGHT_DATE: ${{ inputs.flight_date }}
+          AFTER: ${{ inputs.after }}
         run: python3 scripts/fetch_prices.py
       - name: Salvar data.json
         run: |
