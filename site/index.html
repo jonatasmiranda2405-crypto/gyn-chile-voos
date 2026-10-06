@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Painel GYN Chile</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Barlow:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#edf0f3;--surface:#fff;--ink:#14202b;--muted:#566574;--line:#d3dae1;
+  --accent:#0f6b7a;--accent-ink:#fff;--ok:#1c7a46;--warn:#a15c00;--chip:#e1e8ee;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;--body:"Barlow",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0e161d;--surface:#16212b;--ink:#e6edf2;--muted:#93a4b3;--line:#2a3a47;
+  --accent:#4cc0d1;--accent-ink:#06222a;--ok:#5ccb8b;--warn:#f0a840;--chip:#22313d;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 var(--body);padding:20px 16px 48px}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+h2{font-family:var(--display);font-weight:600;margin:0;font-size:1.35rem;letter-spacing:.02em;text-transform:uppercase}
+.route{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px 20px;display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between}
+.codes{display:flex;align-items:baseline;gap:14px;font-family:var(--display);font-weight:700;font-size:3rem;line-height:1}
+.codes .arrow{color:var(--accent);font-size:2rem}
+.codes small{display:block;font-family:var(--body);font-weight:500;font-size:.8rem;color:var(--muted);letter-spacing:.04em;margin-top:4px}
+.params{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--chip);border-radius:4px;padding:4px 10px;font-size:.85rem;font-weight:500}
+.status{border-left:4px solid var(--warn);background:var(--surface);border-radius:0 6px 6px 0;padding:12px 16px}
+.status.ok{border-left-color:var(--ok)}
+.status span{display:block;color:var(--muted);font-size:.9rem}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.tile.base{border-color:var(--accent)}
+.tile .k{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.tile .v{font-family:var(--display);font-size:2rem;font-weight:700;line-height:1.1}
+.tile .n{font-size:.82rem;color:var(--muted)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:760px}
+th{font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);text-align:left;font-weight:600;padding:8px 10px;border-bottom:2px solid var(--line)}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td .sub{display:block;color:var(--muted);font-size:.82rem}
+.mono,.price{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.price{font-weight:500;white-space:nowrap}
+tr.best td{background:color-mix(in srgb,var(--ok) 10%,transparent)}
+.actions{display:flex;flex-wrap:wrap;gap:6px}
+a.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;font-size:.85rem;border-radius:4px;padding:6px 12px;white-space:nowrap}
+a.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+a:focus-visible{outline:3px solid var(--warn);outline-offset:2px}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.foot{color:var(--muted);font-size:.85rem;margin:0}
+.empty{color:var(--muted);padding:8px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="route">
+    <div class="codes"><div>GYN<small>Goiânia · Santa Genoveva</small></div><span class="arrow">→</span><div>SCL<small>Santiago · Arturo Merino Benítez</small></div></div>
+    <div class="params">
+      <span class="chip">Sex 11/12/2026</span><span class="chip">Saída a partir de 19:30</span><span class="chip">Só ida</span><span class="chip">1 adulto</span><span class="chip">Conexões aceitas</span>
+    </div>
+  </section>
+
+  <div class="status" id="status"></div>
+
+  <section class="tiles">
+    <div class="tile base"><span class="k">Goiânia · menor preço</span><span class="v mono" id="t-gyn">—</span><span class="n" id="t-gyn-n"></span></div>
+    <div class="tile"><span class="k">Brasília · menor preço</span><span class="v mono" id="t-bsb">—</span><span class="n" id="t-bsb-n"></span></div>
+    <div class="tile"><span class="k">Diferença</span><span class="v mono" id="t-diff">—</span><span class="n">Não inclui o deslocamento Goiânia–Brasília (cerca de 200 km)</span></div>
+  </section>
+
+  <section class="panel">
+    <h2>Saindo de Goiânia (GYN)</h2>
+    <div class="scroll" id="gyn"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Saindo de Brasília (BSB) · referência</h2>
+    <div class="scroll" id="bsb"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Outros sites</h2>
+    <div class="links" id="agg"></div>
+    <p class="foot">Os preços mudam em minutos. Confirme o valor final, com bagagem, no site da companhia antes de comprar.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Histórico</h2>
+    <div class="scroll"><table style="min-width:420px"><thead><tr><th>Verificação</th><th>Goiânia</th><th>Brasília</th></tr></thead><tbody id="hist"></tbody></table></div>
+  </section>
+</div>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+  function brl(v){return 'R$ '+Number(v).toLocaleString('pt-BR',{maximumFractionDigits:0})}
+  function when(iso){try{return new Date(iso).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})}catch(e){return iso}}
+  function dur(m){return m?Math.floor(m/60)+'h'+String(m%60).padStart(2,'0'):'—'}
+  var CARRIER={
+    'LATAM':'https://www.latamairlines.com/br/pt','GOL':'https://www.voegol.com.br/','Azul':'https://www.voeazul.com.br/',
+    'Sky':'https://www.skyairline.com/brasil','JetSMART':'https://jetsmart.com/br/pt/','Copa':'https://www.copaair.com/pt-br/',
+    'Avianca':'https://www.avianca.com/br/pt/','Aerolíneas':'https://www.aerolineas.com.ar/pt-br'};
+  function carrierUrl(name){for(var k in CARRIER){if(name.indexOf(k)>-1)return CARRIER[k]}return null}
+
+  function render(box,route,gfUrl){
+    box.textContent='';
+    if(!route||route.status!=='ok'){box.appendChild(el('p','empty',(route&&route.message)||'Sem dados ainda.'));return}
+    if(!route.offers.length){box.appendChild(el('p','empty','Nenhum voo encontrado saindo após 19:30 nessa data.'));return}
+    var t=el('table'),h=el('thead'),hr=el('tr');
+    ['Companhia','Saída','Chegada','Conexões','Duração','Preço','Ir ao site'].forEach(function(x){hr.appendChild(el('th',null,x))});
+    h.appendChild(hr);t.appendChild(h);var b=el('tbody');
+    route.offers.forEach(function(o,i){
+      var tr=el('tr',i===0?'best':'');
+      var a=el('td');a.appendChild(el('b',null,o.airline));a.appendChild(el('span','sub mono',o.flights||''));tr.appendChild(a);
+      tr.appendChild(el('td','mono',o.dep.slice(8,10)+'/'+o.dep.slice(5,7)+' '+o.dep.slice(11)));
+      tr.appendChild(el('td','mono',o.arr.slice(8,10)+'/'+o.arr.slice(5,7)+' '+o.arr.slice(11)));
+      tr.appendChild(el('td',null,o.stops===0?'Direto':o.stops+' · '+(o.via||'')));
+      tr.appendChild(el('td','mono',dur(o.duration_min)));
+      tr.appendChild(el('td','price',brl(o.price)));
+      var ac=el('td'),box2=el('div','actions');
+      if(gfUrl){var g=el('a','btn','Google Flights');g.href=gfUrl;g.target='_blank';g.rel='noopener';box2.appendChild(g)}
+      var cu=carrierUrl(o.airline);if(cu){var c=el('a','btn ghost','Site '+o.airline.split(' ')[0]);c.href=cu;c.target='_blank';c.rel='noopener';box2.appendChild(c)}
+      ac.appendChild(box2);tr.appendChild(ac);b.appendChild(tr);
+    });
+    t.appendChild(b);box.appendChild(t);
+  }
+  function min(r){return r&&r.status==='ok'&&r.offers.length?r.offers[0]:null}
+
+  fetch('data.json?'+Date.now()).then(function(r){return r.json()}).then(function(d){
+    var g=d.routes.GYN,b=d.routes.BSB,mg=min(g),mb=min(b);
+    var st=$('status');st.className='status'+(mg?' ok':'');
+    st.appendChild(el('b',null,mg?'Menor preço saindo de Goiânia: '+brl(mg.price)+' ('+mg.airline+')':'Ainda sem preço para 11/12'));
+    st.appendChild(el('span',null,d.updated?'Atualizado em '+when(d.updated)+'.':(d.message||'')));
+    if(!mg&&g&&g.message)st.appendChild(el('span',null,g.message));
+    if(mg){$('t-gyn').textContent=brl(mg.price);$('t-gyn-n').textContent=mg.airline+' · saída '+mg.dep.slice(11)}
+    if(mb){$('t-bsb').textContent=brl(mb.price);$('t-bsb-n').textContent=mb.airline+' · saída '+mb.dep.slice(11)}
+    if(mg&&mb){var df=mb.price-mg.price;$('t-diff').textContent=(df<0?'−':'+')+brl(Math.abs(df))+(df<0?' em Brasília':' em Goiânia')}
+    render($('gyn'),g,g&&g.google_flights_url);render($('bsb'),b,b&&b.google_flights_url);
+    (d.aggregators||[]).forEach(function(x){var a=el('a','btn ghost',x.name);a.href=x.url;a.target='_blank';a.rel='noopener';$('agg').appendChild(a)});
+    (d.history||[]).slice(-20).reverse().forEach(function(h){var tr=el('tr');tr.appendChild(el('td','mono',when(h.when)));tr.appendChild(el('td','price',h.GYN!=null?brl(h.GYN):'—'));tr.appendChild(el('td','price',h.BSB!=null?brl(h.BSB):'—'));$('hist').appendChild(tr)});
+  }).catch(function(){$('status').appendChild(el('b',null,'Não foi possível carregar data.json'))});
+})();
+</script>
+</body>
+</html>
