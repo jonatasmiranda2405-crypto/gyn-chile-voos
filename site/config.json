@@ -1,0 +1,6 @@
+{
+  "date": "2026-12-11",
+  "after": "19:30",
+  "origins": ["GYN", "BSB"],
+  "booking_options": {"GYN": 2, "BSB": 0}
+}
