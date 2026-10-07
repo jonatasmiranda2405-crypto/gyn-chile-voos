@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-06T16:43:26+00:00",
+  "updated": "2026-10-07T05:59:57+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -14,51 +14,11 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 430,
-          "price": 1142,
+          "price": 1138,
           "sellers": [
             {
-              "seller": "Booking.com",
-              "price": 1118
-            },
-            {
-              "seller": "Flightnetwork",
-              "price": 1137
-            },
-            {
-              "seller": "Mytrip",
-              "price": 1139
-            },
-            {
               "seller": "LATAM",
-              "price": 1142
-            },
-            {
-              "seller": "Decolar",
-              "price": 1185
-            },
-            {
-              "seller": "Expedia",
-              "price": 1191
-            },
-            {
-              "seller": "maxmilhas",
-              "price": 1193
-            },
-            {
-              "seller": "Zupper",
-              "price": 1193
-            },
-            {
-              "seller": "Trip.com",
-              "price": 1202
-            },
-            {
-              "seller": "ViajaNet",
-              "price": 1210
-            },
-            {
-              "seller": "123Milhas",
-              "price": 1213
+              "price": 1138
             }
           ]
         }
@@ -68,18 +28,7 @@
     "BSB": {
       "status": "ok",
       "message": "",
-      "offers": [
-        {
-          "airline": "Gol + Turkish Airlines",
-          "flights": "G3 1459 TK 215",
-          "dep": "2026-12-11 21:35",
-          "arr": "2026-12-12 10:00",
-          "stops": 1,
-          "via": "GRU",
-          "duration_min": 745,
-          "price": 4117
-        }
-      ],
+      "offers": [],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
     }
   },
@@ -149,6 +98,13 @@
       "after": "19:30",
       "GYN": 1142,
       "BSB": 4117
+    },
+    {
+      "when": "2026-10-07T05:59:57+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1138,
+      "BSB": null
     }
   ],
   "query": {
