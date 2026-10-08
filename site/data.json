@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08T06:04:43+00:00",
+  "updated": "2026-10-08T18:50:59+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -53,12 +53,12 @@
               "price": 1194
             },
             {
-              "seller": "ViajaNet",
-              "price": 1211
+              "seller": "Trip.com",
+              "price": 1210
             },
             {
-              "seller": "Trip.com",
-              "price": 1213
+              "seller": "ViajaNet",
+              "price": 1211
             }
           ]
         }
@@ -68,7 +68,28 @@
     "BSB": {
       "status": "ok",
       "message": "",
-      "offers": [],
+      "offers": [
+        {
+          "airline": "LATAM",
+          "flights": "LA 3384 LA 715",
+          "dep": "2026-12-11 20:45",
+          "arr": "2026-12-12 11:15",
+          "stops": 1,
+          "via": "VCP",
+          "duration_min": 870,
+          "price": 1102
+        },
+        {
+          "airline": "LATAM",
+          "flights": "LA 4622 LA 715",
+          "dep": "2026-12-11 20:30",
+          "arr": "2026-12-12 11:15",
+          "stops": 1,
+          "via": "GRU",
+          "duration_min": 885,
+          "price": 1202
+        }
+      ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
     }
   },
@@ -159,6 +180,13 @@
       "after": "19:30",
       "GYN": 1143,
       "BSB": null
+    },
+    {
+      "when": "2026-10-08T18:50:59+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1143,
+      "BSB": 1102
     }
   ],
   "query": {
