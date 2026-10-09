@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T06:09:23+00:00",
+  "updated": "2026-10-09T18:21:24+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -7,74 +7,62 @@
       "message": "",
       "offers": [
         {
-          "airline": "LATAM + Aerolineas Argentinas",
-          "flights": "LA 3545 AR 1241 AR 1284",
+          "airline": "LATAM",
+          "flights": "LA 3545 LA 763",
           "dep": "2026-12-11 19:45",
-          "arr": "2026-12-12 18:05",
-          "stops": 2,
-          "via": "GRU, AEP",
-          "duration_min": 1340,
-          "price": 1772,
+          "arr": "2026-12-12 02:55",
+          "stops": 1,
+          "via": "GRU",
+          "duration_min": 430,
+          "price": 906,
           "sellers": [
             {
-              "seller": "Expedia",
-              "price": 1735
+              "seller": "Booking.com",
+              "price": 906
             },
             {
-              "seller": "Flightnetwork",
-              "price": 1772
+              "seller": "LATAM",
+              "price": 921
             },
             {
               "seller": "Gotogate",
-              "price": 1779
+              "price": 952
             },
             {
               "seller": "Mytrip",
-              "price": 1784
+              "price": 952
+            },
+            {
+              "seller": "Flightnetwork",
+              "price": 952
+            },
+            {
+              "seller": "maxmilhas",
+              "price": 962
+            },
+            {
+              "seller": "Zupper",
+              "price": 962
             },
             {
               "seller": "Decolar",
-              "price": 1812
+              "price": 968
             },
             {
-              "seller": "Booking.com",
-              "price": 1813
+              "seller": "Trip.com",
+              "price": 968
+            },
+            {
+              "seller": "Expedia",
+              "price": 972
+            },
+            {
+              "seller": "123Milhas",
+              "price": 978
             },
             {
               "seller": "ViajaNet",
-              "price": 1850
-            }
-          ]
-        },
-        {
-          "airline": "LATAM",
-          "flights": "LA 3545 LA 8004 LA 2697",
-          "dep": "2026-12-11 19:45",
-          "arr": "2026-12-12 15:00",
-          "stops": 2,
-          "via": "GRU, LIM",
-          "duration_min": 1155,
-          "price": 3743,
-          "sellers": [
-            {
-              "seller": "LATAM",
-              "price": 3743
-            },
-            {
-              "seller": "Booking.com",
-              "price": 3852
-            },
-            {
-              "seller": "Mytrip",
-              "price": 3930
-            },
-            {
-              "seller": "Gotogate",
-              "price": 3930
-            },
-            {
-              "seller": "Flightnetwork",
-              "price": 3930
+              "price": 988
             }
           ]
         }
@@ -188,6 +176,13 @@
       "date": "2026-12-11",
       "after": "19:30",
       "GYN": 1772,
+      "BSB": null
+    },
+    {
+      "when": "2026-10-09T18:21:24+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 906,
       "BSB": null
     }
   ],
