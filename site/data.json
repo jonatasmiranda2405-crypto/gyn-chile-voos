@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08T18:50:59+00:00",
+  "updated": "2026-10-09T06:09:23+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -7,58 +7,74 @@
       "message": "",
       "offers": [
         {
-          "airline": "LATAM",
-          "flights": "LA 3545 LA 763",
+          "airline": "LATAM + Aerolineas Argentinas",
+          "flights": "LA 3545 AR 1241 AR 1284",
           "dep": "2026-12-11 19:45",
-          "arr": "2026-12-12 02:55",
-          "stops": 1,
-          "via": "GRU",
-          "duration_min": 430,
-          "price": 1143,
+          "arr": "2026-12-12 18:05",
+          "stops": 2,
+          "via": "GRU, AEP",
+          "duration_min": 1340,
+          "price": 1772,
           "sellers": [
             {
-              "seller": "Booking.com",
-              "price": 1116
-            },
-            {
-              "seller": "LATAM",
-              "price": 1143
-            },
-            {
-              "seller": "Gotogate",
-              "price": 1169
-            },
-            {
-              "seller": "Mytrip",
-              "price": 1169
+              "seller": "Expedia",
+              "price": 1735
             },
             {
               "seller": "Flightnetwork",
-              "price": 1169
+              "price": 1772
+            },
+            {
+              "seller": "Gotogate",
+              "price": 1779
+            },
+            {
+              "seller": "Mytrip",
+              "price": 1784
             },
             {
               "seller": "Decolar",
-              "price": 1186
+              "price": 1812
             },
             {
-              "seller": "Expedia",
-              "price": 1193
-            },
-            {
-              "seller": "maxmilhas",
-              "price": 1194
-            },
-            {
-              "seller": "Zupper",
-              "price": 1194
-            },
-            {
-              "seller": "Trip.com",
-              "price": 1210
+              "seller": "Booking.com",
+              "price": 1813
             },
             {
               "seller": "ViajaNet",
-              "price": 1211
+              "price": 1850
+            }
+          ]
+        },
+        {
+          "airline": "LATAM",
+          "flights": "LA 3545 LA 8004 LA 2697",
+          "dep": "2026-12-11 19:45",
+          "arr": "2026-12-12 15:00",
+          "stops": 2,
+          "via": "GRU, LIM",
+          "duration_min": 1155,
+          "price": 3743,
+          "sellers": [
+            {
+              "seller": "LATAM",
+              "price": 3743
+            },
+            {
+              "seller": "Booking.com",
+              "price": 3852
+            },
+            {
+              "seller": "Mytrip",
+              "price": 3930
+            },
+            {
+              "seller": "Gotogate",
+              "price": 3930
+            },
+            {
+              "seller": "Flightnetwork",
+              "price": 3930
             }
           ]
         }
@@ -68,28 +84,7 @@
     "BSB": {
       "status": "ok",
       "message": "",
-      "offers": [
-        {
-          "airline": "LATAM",
-          "flights": "LA 3384 LA 715",
-          "dep": "2026-12-11 20:45",
-          "arr": "2026-12-12 11:15",
-          "stops": 1,
-          "via": "VCP",
-          "duration_min": 870,
-          "price": 1102
-        },
-        {
-          "airline": "LATAM",
-          "flights": "LA 4622 LA 715",
-          "dep": "2026-12-11 20:30",
-          "arr": "2026-12-12 11:15",
-          "stops": 1,
-          "via": "GRU",
-          "duration_min": 885,
-          "price": 1202
-        }
-      ],
+      "offers": [],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
     }
   },
@@ -187,6 +182,13 @@
       "after": "19:30",
       "GYN": 1143,
       "BSB": 1102
+    },
+    {
+      "when": "2026-10-09T06:09:23+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1772,
+      "BSB": null
     }
   ],
   "query": {
