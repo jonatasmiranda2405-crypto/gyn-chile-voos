@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10T06:03:16+00:00",
+  "updated": "2026-10-10T17:20:58+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -14,22 +14,14 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 430,
-          "price": 903,
+          "price": 918,
           "sellers": [
-            {
-              "seller": "Booking.com",
-              "price": 903
-            },
             {
               "seller": "LATAM",
               "price": 918
             },
             {
               "seller": "Gotogate",
-              "price": 948
-            },
-            {
-              "seller": "Mytrip",
               "price": 948
             },
             {
@@ -53,16 +45,8 @@
               "price": 968
             },
             {
-              "seller": "Trip.com",
-              "price": 969
-            },
-            {
               "seller": "123Milhas",
               "price": 974
-            },
-            {
-              "seller": "ViajaNet",
-              "price": 984
             }
           ]
         }
@@ -74,14 +58,14 @@
       "message": "",
       "offers": [
         {
-          "airline": "Gol + Aerolineas Argentinas",
-          "flights": "G3 1459 AR 1241 AR 1284",
-          "dep": "2026-12-11 21:35",
-          "arr": "2026-12-12 18:05",
-          "stops": 2,
-          "via": "GRU, AEP",
-          "duration_min": 1230,
-          "price": 1737
+          "airline": "LATAM",
+          "flights": "LA 3384 LA 715",
+          "dep": "2026-12-11 20:45",
+          "arr": "2026-12-12 11:15",
+          "stops": 1,
+          "via": "VCP",
+          "duration_min": 870,
+          "price": 777
         }
       ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
@@ -202,6 +186,13 @@
       "after": "19:30",
       "GYN": 903,
       "BSB": 1737
+    },
+    {
+      "when": "2026-10-10T17:20:58+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 918,
+      "BSB": 777
     }
   ],
   "query": {
