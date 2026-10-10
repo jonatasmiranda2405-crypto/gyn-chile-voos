@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T18:21:24+00:00",
+  "updated": "2026-10-10T06:03:16+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -14,55 +14,55 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 430,
-          "price": 906,
+          "price": 903,
           "sellers": [
             {
               "seller": "Booking.com",
-              "price": 906
+              "price": 903
             },
             {
               "seller": "LATAM",
-              "price": 921
+              "price": 918
             },
             {
               "seller": "Gotogate",
-              "price": 952
+              "price": 948
             },
             {
               "seller": "Mytrip",
-              "price": 952
+              "price": 948
             },
             {
               "seller": "Flightnetwork",
-              "price": 952
+              "price": 948
             },
             {
               "seller": "maxmilhas",
-              "price": 962
+              "price": 958
             },
             {
               "seller": "Zupper",
-              "price": 962
+              "price": 958
             },
             {
               "seller": "Decolar",
+              "price": 964
+            },
+            {
+              "seller": "Expedia",
               "price": 968
             },
             {
               "seller": "Trip.com",
-              "price": 968
-            },
-            {
-              "seller": "Expedia",
-              "price": 972
+              "price": 969
             },
             {
               "seller": "123Milhas",
-              "price": 978
+              "price": 974
             },
             {
               "seller": "ViajaNet",
-              "price": 988
+              "price": 984
             }
           ]
         }
@@ -72,7 +72,18 @@
     "BSB": {
       "status": "ok",
       "message": "",
-      "offers": [],
+      "offers": [
+        {
+          "airline": "Gol + Aerolineas Argentinas",
+          "flights": "G3 1459 AR 1241 AR 1284",
+          "dep": "2026-12-11 21:35",
+          "arr": "2026-12-12 18:05",
+          "stops": 2,
+          "via": "GRU, AEP",
+          "duration_min": 1230,
+          "price": 1737
+        }
+      ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
     }
   },
@@ -184,6 +195,13 @@
       "after": "19:30",
       "GYN": 906,
       "BSB": null
+    },
+    {
+      "when": "2026-10-10T06:03:16+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 903,
+      "BSB": 1737
     }
   ],
   "query": {
