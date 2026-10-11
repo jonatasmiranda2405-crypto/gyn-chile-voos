@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-11T05:47:10+00:00",
+  "updated": "2026-10-11T17:41:28+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -29,11 +29,11 @@
               "price": 948
             },
             {
-              "seller": "Gotogate",
+              "seller": "Flightnetwork",
               "price": 948
             },
             {
-              "seller": "Flightnetwork",
+              "seller": "Gotogate",
               "price": 948
             },
             {
@@ -57,6 +57,10 @@
               "price": 969
             },
             {
+              "seller": "123Milhas",
+              "price": 974
+            },
+            {
               "seller": "ViajaNet",
               "price": 984
             }
@@ -71,12 +75,12 @@
       "offers": [
         {
           "airline": "LATAM",
-          "flights": "LA 3384 LA 742",
+          "flights": "LA 3384 LA 715",
           "dep": "2026-12-11 20:45",
-          "arr": "2026-12-12 14:55",
+          "arr": "2026-12-12 11:15",
           "stops": 1,
           "via": "VCP",
-          "duration_min": 1090,
+          "duration_min": 870,
           "price": 777
         }
       ],
@@ -208,6 +212,13 @@
     },
     {
       "when": "2026-10-11T05:47:10+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 918,
+      "BSB": 777
+    },
+    {
+      "when": "2026-10-11T17:41:28+00:00",
       "date": "2026-12-11",
       "after": "19:30",
       "GYN": 918,
