@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12T21:16:32+00:00",
+  "updated": "2026-10-13T06:47:37+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -18,7 +18,7 @@
           "sellers": [
             {
               "seller": "Booking.com",
-              "price": 1115
+              "price": 1116
             },
             {
               "seller": "LATAM",
@@ -29,7 +29,7 @@
               "price": 1162
             },
             {
-              "seller": "Flightnetwork",
+              "seller": "Gotogate",
               "price": 1168
             },
             {
@@ -37,7 +37,7 @@
               "price": 1168
             },
             {
-              "seller": "Gotogate",
+              "seller": "Flightnetwork",
               "price": 1168
             },
             {
@@ -53,12 +53,16 @@
               "price": 1193
             },
             {
-              "seller": "Trip.com",
-              "price": 1205
-            },
-            {
               "seller": "ViajaNet",
               "price": 1207
+            },
+            {
+              "seller": "123Milhas",
+              "price": 1214
+            },
+            {
+              "seller": "Trip.com",
+              "price": 1227
             }
           ]
         }
@@ -68,18 +72,7 @@
     "BSB": {
       "status": "ok",
       "message": "",
-      "offers": [
-        {
-          "airline": "LATAM",
-          "flights": "LA 4622 LA 715",
-          "dep": "2026-12-11 20:30",
-          "arr": "2026-12-12 11:15",
-          "stops": 1,
-          "via": "GRU",
-          "duration_min": 885,
-          "price": 1101
-        }
-      ],
+      "offers": [],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
     }
   },
@@ -233,6 +226,13 @@
       "after": "19:30",
       "GYN": 1142,
       "BSB": 1101
+    },
+    {
+      "when": "2026-10-13T06:47:37+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1142,
+      "BSB": null
     }
   ],
   "query": {
