@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13T19:18:11+00:00",
+  "updated": "2026-10-14T04:54:35+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -14,51 +14,55 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 430,
-          "price": 1142,
+          "price": 1146,
           "sellers": [
             {
               "seller": "Booking.com",
-              "price": 1112
+              "price": 1117
             },
             {
               "seller": "LATAM",
-              "price": 1142
+              "price": 1146
             },
             {
               "seller": "Zupper",
-              "price": 1162
-            },
-            {
-              "seller": "Gotogate",
-              "price": 1168
+              "price": 1166
             },
             {
               "seller": "Mytrip",
-              "price": 1168
+              "price": 1172
+            },
+            {
+              "seller": "Gotogate",
+              "price": 1172
             },
             {
               "seller": "Flightnetwork",
-              "price": 1168
+              "price": 1172
             },
             {
               "seller": "Decolar",
-              "price": 1182
+              "price": 1187
             },
             {
               "seller": "Expedia",
-              "price": 1192
+              "price": 1197
             },
             {
               "seller": "maxmilhas",
-              "price": 1193
+              "price": 1198
             },
             {
               "seller": "ViajaNet",
-              "price": 1207
+              "price": 1211
+            },
+            {
+              "seller": "123Milhas",
+              "price": 1218
             },
             {
               "seller": "Trip.com",
-              "price": 1227
+              "price": 1231
             }
           ]
         }
@@ -235,6 +239,13 @@
       "date": "2026-12-11",
       "after": "19:30",
       "GYN": 1142,
+      "BSB": null
+    },
+    {
+      "when": "2026-10-14T04:54:35+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1146,
       "BSB": null
     }
   ],
