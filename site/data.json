@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17T04:26:27+00:00",
+  "updated": "2026-10-17T15:35:22+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -25,15 +25,11 @@
               "price": 1161
             },
             {
-              "seller": "Zupper",
-              "price": 1187
-            },
-            {
-              "seller": "Gotogate",
+              "seller": "Mytrip",
               "price": 1193
             },
             {
-              "seller": "Mytrip",
+              "seller": "Gotogate",
               "price": 1193
             },
             {
@@ -277,6 +273,13 @@
     },
     {
       "when": "2026-10-17T04:26:27+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1161,
+      "BSB": null
+    },
+    {
+      "when": "2026-10-17T15:35:22+00:00",
       "date": "2026-12-11",
       "after": "19:30",
       "GYN": 1161,
