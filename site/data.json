@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17T15:35:22+00:00",
+  "updated": "2026-10-18T04:34:33+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -29,11 +29,11 @@
               "price": 1193
             },
             {
-              "seller": "Gotogate",
+              "seller": "Flightnetwork",
               "price": 1193
             },
             {
-              "seller": "Flightnetwork",
+              "seller": "Gotogate",
               "price": 1193
             },
             {
@@ -46,7 +46,7 @@
             },
             {
               "seller": "Trip.com",
-              "price": 1247
+              "price": 1221
             },
             {
               "seller": "ViajaNet",
@@ -280,6 +280,13 @@
     },
     {
       "when": "2026-10-17T15:35:22+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1161,
+      "BSB": null
+    },
+    {
+      "when": "2026-10-18T04:34:33+00:00",
       "date": "2026-12-11",
       "after": "19:30",
       "GYN": 1161,
