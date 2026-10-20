@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20T04:51:45+00:00",
+  "updated": "2026-10-20T17:08:18+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -37,20 +37,16 @@
               "price": 1187
             },
             {
-              "seller": "Decolar",
-              "price": 1202
-            },
-            {
-              "seller": "Expedia",
-              "price": 1207
-            },
-            {
               "seller": "Trip.com",
-              "price": 1214
+              "price": 1197
+            },
+            {
+              "seller": "Decolar",
+              "price": 1208
             },
             {
               "seller": "ViajaNet",
-              "price": 1253
+              "price": 1260
             }
           ]
         }
@@ -60,7 +56,18 @@
     "BSB": {
       "status": "ok",
       "message": "",
-      "offers": [],
+      "offers": [
+        {
+          "airline": "Gol + Aerolineas Argentinas",
+          "flights": "G3 1459 AR 1241 AR 1284",
+          "dep": "2026-12-11 21:35",
+          "arr": "2026-12-12 18:05",
+          "stops": 2,
+          "via": "GRU, AEP",
+          "duration_min": 1230,
+          "price": 1759
+        }
+      ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
     }
   },
@@ -319,6 +326,13 @@
       "after": "19:30",
       "GYN": 1156,
       "BSB": null
+    },
+    {
+      "when": "2026-10-20T17:08:18+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1156,
+      "BSB": 1759
     }
   ],
   "query": {
