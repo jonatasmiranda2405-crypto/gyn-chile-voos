@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T04:48:00+00:00",
+  "updated": "2026-10-21T17:12:50+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -18,18 +18,22 @@
           "sellers": [
             {
               "seller": "Booking.com",
-              "price": 1125
+              "price": 1132
             },
             {
               "seller": "LATAM",
               "price": 1147
             },
             {
-              "seller": "Mytrip",
-              "price": 1178
+              "seller": "Zupper",
+              "price": 1172
             },
             {
               "seller": "Gotogate",
+              "price": 1178
+            },
+            {
+              "seller": "Mytrip",
               "price": 1178
             },
             {
@@ -42,7 +46,7 @@
             },
             {
               "seller": "Trip.com",
-              "price": 1221
+              "price": 1205
             },
             {
               "seller": "ViajaNet",
@@ -325,6 +329,13 @@
     },
     {
       "when": "2026-10-21T04:48:00+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1147,
+      "BSB": null
+    },
+    {
+      "when": "2026-10-21T17:12:50+00:00",
       "date": "2026-12-11",
       "after": "19:30",
       "GYN": 1147,
