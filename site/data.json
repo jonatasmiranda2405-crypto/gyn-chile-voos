@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20T17:08:18+00:00",
+  "updated": "2026-10-21T04:48:00+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -14,39 +14,39 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 430,
-          "price": 1156,
+          "price": 1147,
           "sellers": [
             {
               "seller": "Booking.com",
-              "price": 1133
+              "price": 1125
             },
             {
               "seller": "LATAM",
-              "price": 1156
-            },
-            {
-              "seller": "Gotogate",
-              "price": 1187
+              "price": 1147
             },
             {
               "seller": "Mytrip",
-              "price": 1187
+              "price": 1178
+            },
+            {
+              "seller": "Gotogate",
+              "price": 1178
             },
             {
               "seller": "Flightnetwork",
-              "price": 1187
-            },
-            {
-              "seller": "Trip.com",
-              "price": 1197
+              "price": 1178
             },
             {
               "seller": "Decolar",
-              "price": 1208
+              "price": 1199
+            },
+            {
+              "seller": "Trip.com",
+              "price": 1221
             },
             {
               "seller": "ViajaNet",
-              "price": 1260
+              "price": 1250
             }
           ]
         }
@@ -56,18 +56,7 @@
     "BSB": {
       "status": "ok",
       "message": "",
-      "offers": [
-        {
-          "airline": "Gol + Aerolineas Argentinas",
-          "flights": "G3 1459 AR 1241 AR 1284",
-          "dep": "2026-12-11 21:35",
-          "arr": "2026-12-12 18:05",
-          "stops": 2,
-          "via": "GRU, AEP",
-          "duration_min": 1230,
-          "price": 1759
-        }
-      ],
+      "offers": [],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
     }
   },
@@ -333,6 +322,13 @@
       "after": "19:30",
       "GYN": 1156,
       "BSB": 1759
+    },
+    {
+      "when": "2026-10-21T04:48:00+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1147,
+      "BSB": null
     }
   ],
   "query": {
