@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T17:12:50+00:00",
+  "updated": "2026-10-22T04:46:17+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -14,43 +14,31 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 430,
-          "price": 1147,
+          "price": 1150,
           "sellers": [
             {
               "seller": "Booking.com",
-              "price": 1132
+              "price": 1134
             },
             {
               "seller": "LATAM",
-              "price": 1147
+              "price": 1150
             },
             {
               "seller": "Zupper",
-              "price": 1172
-            },
-            {
-              "seller": "Gotogate",
-              "price": 1178
-            },
-            {
-              "seller": "Mytrip",
-              "price": 1178
-            },
-            {
-              "seller": "Flightnetwork",
-              "price": 1178
+              "price": 1175
             },
             {
               "seller": "Decolar",
-              "price": 1199
+              "price": 1202
             },
             {
               "seller": "Trip.com",
-              "price": 1205
+              "price": 1202
             },
             {
               "seller": "ViajaNet",
-              "price": 1250
+              "price": 1253
             }
           ]
         }
@@ -339,6 +327,13 @@
       "date": "2026-12-11",
       "after": "19:30",
       "GYN": 1147,
+      "BSB": null
+    },
+    {
+      "when": "2026-10-22T04:46:17+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1150,
       "BSB": null
     }
   ],
