@@ -1,64 +1,11 @@
 {
-  "updated": "2026-10-24T15:57:27+00:00",
+  "updated": "2026-10-25T04:41:30+00:00",
   "message": "",
   "routes": {
     "GYN": {
       "status": "ok",
       "message": "",
-      "offers": [
-        {
-          "airline": "LATAM",
-          "flights": "LA 3545 LA 763",
-          "dep": "2026-12-11 19:45",
-          "arr": "2026-12-12 02:55",
-          "stops": 1,
-          "via": "GRU",
-          "duration_min": 430,
-          "price": 1152,
-          "sellers": [
-            {
-              "seller": "Booking.com",
-              "price": 1136
-            },
-            {
-              "seller": "LATAM",
-              "price": 1152
-            },
-            {
-              "seller": "Zupper",
-              "price": 1177
-            },
-            {
-              "seller": "Gotogate",
-              "price": 1183
-            },
-            {
-              "seller": "Mytrip",
-              "price": 1183
-            },
-            {
-              "seller": "Flightnetwork",
-              "price": 1183
-            },
-            {
-              "seller": "Trip.com",
-              "price": 1186
-            },
-            {
-              "seller": "Expedia",
-              "price": 1203
-            },
-            {
-              "seller": "Decolar",
-              "price": 1204
-            },
-            {
-              "seller": "ViajaNet",
-              "price": 1255
-            }
-          ]
-        }
-      ],
+      "offers": [],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDR1lOcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
     },
     "BSB": {
@@ -385,6 +332,13 @@
       "date": "2026-12-11",
       "after": "19:30",
       "GYN": 1152,
+      "BSB": null
+    },
+    {
+      "when": "2026-10-25T04:41:30+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": null,
       "BSB": null
     }
   ],
