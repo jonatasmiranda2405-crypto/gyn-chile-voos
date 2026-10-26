@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26T04:47:29+00:00",
+  "updated": "2026-10-26T18:41:07+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -11,7 +11,18 @@
     "BSB": {
       "status": "ok",
       "message": "",
-      "offers": [],
+      "offers": [
+        {
+          "airline": "LATAM",
+          "flights": "LA 3780 LA 786",
+          "dep": "2026-12-11 21:45",
+          "arr": "2026-12-12 15:40",
+          "stops": 1,
+          "via": "GIG",
+          "duration_min": 1075,
+          "price": 1358
+        }
+      ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
     }
   },
@@ -354,6 +365,13 @@
       "after": "19:30",
       "GYN": null,
       "BSB": null
+    },
+    {
+      "when": "2026-10-26T18:41:07+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": null,
+      "BSB": 1358
     }
   ],
   "query": {
