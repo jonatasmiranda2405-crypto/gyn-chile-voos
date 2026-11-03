@@ -1,56 +1,11 @@
 {
-  "updated": "2026-11-03T06:47:30+00:00",
+  "updated": "2026-11-03T19:29:25+00:00",
   "message": "",
   "routes": {
     "GYN": {
       "status": "ok",
       "message": "",
-      "offers": [
-        {
-          "airline": "LATAM",
-          "flights": "LA 3545 LA 742",
-          "dep": "2026-12-11 20:00",
-          "arr": "2026-12-12 14:55",
-          "stops": 1,
-          "via": "GRU",
-          "duration_min": 1135,
-          "price": 1529,
-          "sellers": [
-            {
-              "seller": "LATAM",
-              "price": 1643
-            },
-            {
-              "seller": "Zupper",
-              "price": 1678
-            },
-            {
-              "seller": "Booking.com",
-              "price": 1689
-            },
-            {
-              "seller": "Trip.com",
-              "price": 1703
-            },
-            {
-              "seller": "Mytrip",
-              "price": 1725
-            },
-            {
-              "seller": "Gotogate",
-              "price": 1725
-            },
-            {
-              "seller": "Flightnetwork",
-              "price": 1725
-            },
-            {
-              "seller": "Kiwi.com",
-              "price": 2079
-            }
-          ]
-        }
-      ],
+      "offers": [],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDR1lOcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
     },
     "BSB": {
@@ -58,24 +13,14 @@
       "message": "",
       "offers": [
         {
-          "airline": "LATAM",
-          "flights": "LA 3384 LA 742",
-          "dep": "2026-12-11 20:45",
-          "arr": "2026-12-12 14:55",
+          "airline": "Gol + Turkish Airlines",
+          "flights": "G3 1459 TK 215",
+          "dep": "2026-12-11 21:35",
+          "arr": "2026-12-12 10:00",
           "stops": 1,
-          "via": "VCP",
-          "duration_min": 1090,
-          "price": 1378
-        },
-        {
-          "airline": "LATAM",
-          "flights": "LA 3780 LA 786",
-          "dep": "2026-12-11 21:45",
-          "arr": "2026-12-12 15:40",
-          "stops": 1,
-          "via": "GIG",
-          "duration_min": 1075,
-          "price": 1454
+          "via": "GRU",
+          "duration_min": 745,
+          "price": 1914
         }
       ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
@@ -532,6 +477,13 @@
       "after": "19:30",
       "GYN": 1529,
       "BSB": 1378
+    },
+    {
+      "when": "2026-11-03T19:29:25+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": null,
+      "BSB": 1914
     }
   ],
   "query": {
