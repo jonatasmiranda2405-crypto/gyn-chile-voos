@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T19:29:25+00:00",
+  "updated": "2026-11-04T06:22:57+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -13,14 +13,14 @@
       "message": "",
       "offers": [
         {
-          "airline": "Gol + Turkish Airlines",
-          "flights": "G3 1459 TK 215",
-          "dep": "2026-12-11 21:35",
+          "airline": "LATAM + Turkish Airlines",
+          "flights": "LA 4622 TK 215",
+          "dep": "2026-12-11 20:30",
           "arr": "2026-12-12 10:00",
           "stops": 1,
           "via": "GRU",
-          "duration_min": 745,
-          "price": 1914
+          "duration_min": 810,
+          "price": 1938
         }
       ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
@@ -484,6 +484,13 @@
       "after": "19:30",
       "GYN": null,
       "BSB": 1914
+    },
+    {
+      "when": "2026-11-04T06:22:57+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": null,
+      "BSB": 1938
     }
   ],
   "query": {
