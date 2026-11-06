@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06T06:46:18+00:00",
+  "updated": "2026-11-06T19:24:50+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -7,51 +7,14 @@
       "message": "",
       "offers": [
         {
-          "airline": "LATAM",
-          "flights": "LA 3545 LA 3352 LA 786",
+          "airline": "Azul + Aerolineas Argentinas",
+          "flights": "AD 4567 AR 1243 AR 1284",
           "dep": "2026-12-11 20:00",
-          "arr": "2026-12-12 15:40",
+          "arr": "2026-12-12 18:20",
           "stops": 2,
-          "via": "GRU, GIG",
-          "duration_min": 1180,
-          "price": 1234,
-          "sellers": []
-        },
-        {
-          "airline": "LATAM",
-          "flights": "LA 3545 LA 4798 LA 786",
-          "dep": "2026-12-11 20:00",
-          "arr": "2026-12-12 15:40",
-          "stops": 2,
-          "via": "GRU, GIG",
-          "duration_min": 1180,
-          "price": 1234,
-          "sellers": [
-            {
-              "seller": "Booking.com",
-              "price": 1234
-            },
-            {
-              "seller": "Decolar",
-              "price": 1286
-            },
-            {
-              "seller": "Mytrip",
-              "price": 1296
-            },
-            {
-              "seller": "Gotogate",
-              "price": 1296
-            },
-            {
-              "seller": "Flightnetwork",
-              "price": 1296
-            },
-            {
-              "seller": "ViajaNet",
-              "price": 1366
-            }
-          ]
+          "via": "VCP, AEP",
+          "duration_min": 1340,
+          "price": 3407
         }
       ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDR1lOcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
@@ -60,6 +23,16 @@
       "status": "ok",
       "message": "",
       "offers": [
+        {
+          "airline": "LATAM",
+          "flights": "LA 3780 LA 786",
+          "dep": "2026-12-11 21:45",
+          "arr": "2026-12-12 15:40",
+          "stops": 1,
+          "via": "GIG",
+          "duration_min": 1075,
+          "price": 1191
+        },
         {
           "airline": "Gol + Turkish Airlines",
           "flights": "G3 1459 TK 215",
@@ -567,6 +540,13 @@
       "after": "19:30",
       "GYN": 1234,
       "BSB": 1928
+    },
+    {
+      "when": "2026-11-06T19:24:50+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 3407,
+      "BSB": 1191
     }
   ],
   "query": {
