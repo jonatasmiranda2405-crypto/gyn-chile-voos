@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09T22:21:52+00:00",
+  "updated": "2026-11-10T07:18:55+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -14,51 +14,55 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 485,
-          "price": 1247,
+          "price": 1250,
           "sellers": [
             {
               "seller": "LATAM",
-              "price": 1247
+              "price": 1250
             },
             {
               "seller": "Booking.com",
-              "price": 1247
+              "price": 1250
             },
             {
               "seller": "Zupper",
-              "price": 1279
+              "price": 1281
             },
             {
               "seller": "Decolar",
-              "price": 1299
-            },
-            {
-              "seller": "Gotogate",
-              "price": 1310
+              "price": 1302
             },
             {
               "seller": "Mytrip",
-              "price": 1310
+              "price": 1313
             },
             {
               "seller": "Flightnetwork",
-              "price": 1310
+              "price": 1313
+            },
+            {
+              "seller": "Gotogate",
+              "price": 1313
             },
             {
               "seller": "maxmilhas",
-              "price": 1359
+              "price": 1362
             },
             {
               "seller": "ViajaNet",
-              "price": 1380
+              "price": 1383
+            },
+            {
+              "seller": "Trip.com",
+              "price": 1392
             },
             {
               "seller": "123Milhas",
-              "price": 1428
+              "price": 1431
             },
             {
               "seller": "Kiwi.com",
-              "price": 1934
+              "price": 1936
             }
           ]
         }
@@ -77,7 +81,7 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 455,
-          "price": 1204
+          "price": 1207
         },
         {
           "airline": "LATAM + Turkish Airlines",
@@ -87,7 +91,7 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 810,
-          "price": 1941
+          "price": 1946
         }
       ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
@@ -635,6 +639,13 @@
       "after": "19:30",
       "GYN": 1247,
       "BSB": 1204
+    },
+    {
+      "when": "2026-11-10T07:18:55+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1250,
+      "BSB": 1207
     }
   ],
   "query": {
