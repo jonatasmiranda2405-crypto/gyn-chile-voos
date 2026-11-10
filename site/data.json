@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T07:18:55+00:00",
+  "updated": "2026-11-10T19:44:31+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -14,55 +14,11 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 485,
-          "price": 1250,
+          "price": 1002,
           "sellers": [
             {
               "seller": "LATAM",
-              "price": 1250
-            },
-            {
-              "seller": "Booking.com",
-              "price": 1250
-            },
-            {
-              "seller": "Zupper",
-              "price": 1281
-            },
-            {
-              "seller": "Decolar",
-              "price": 1302
-            },
-            {
-              "seller": "Mytrip",
-              "price": 1313
-            },
-            {
-              "seller": "Flightnetwork",
-              "price": 1313
-            },
-            {
-              "seller": "Gotogate",
-              "price": 1313
-            },
-            {
-              "seller": "maxmilhas",
-              "price": 1362
-            },
-            {
-              "seller": "ViajaNet",
-              "price": 1383
-            },
-            {
-              "seller": "Trip.com",
-              "price": 1392
-            },
-            {
-              "seller": "123Milhas",
-              "price": 1431
-            },
-            {
-              "seller": "Kiwi.com",
-              "price": 1936
+              "price": 1002
             }
           ]
         }
@@ -645,6 +601,13 @@
       "date": "2026-12-11",
       "after": "19:30",
       "GYN": 1250,
+      "BSB": 1207
+    },
+    {
+      "when": "2026-11-10T19:44:31+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1002,
       "BSB": 1207
     }
   ],
