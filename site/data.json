@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11T06:21:04+00:00",
+  "updated": "2026-11-11T19:35:50+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -19,54 +19,6 @@
             {
               "seller": "LATAM",
               "price": 1013
-            },
-            {
-              "seller": "Booking.com",
-              "price": 1013
-            },
-            {
-              "seller": "OurTrip",
-              "price": 1023
-            },
-            {
-              "seller": "Zupper",
-              "price": 1049
-            },
-            {
-              "seller": "Trip.com",
-              "price": 1058
-            },
-            {
-              "seller": "Mytrip",
-              "price": 1064
-            },
-            {
-              "seller": "Gotogate",
-              "price": 1064
-            },
-            {
-              "seller": "Flightnetwork",
-              "price": 1064
-            },
-            {
-              "seller": "Decolar",
-              "price": 1067
-            },
-            {
-              "seller": "ViajaNet",
-              "price": 1067
-            },
-            {
-              "seller": "maxmilhas",
-              "price": 1113
-            },
-            {
-              "seller": "123Milhas",
-              "price": 1182
-            },
-            {
-              "seller": "Kiwi.com",
-              "price": 1641
             }
           ]
         }
@@ -660,6 +612,13 @@
     },
     {
       "when": "2026-11-11T06:21:04+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1013,
+      "BSB": 1220
+    },
+    {
+      "when": "2026-11-11T19:35:50+00:00",
       "date": "2026-12-11",
       "after": "19:30",
       "GYN": 1013,
