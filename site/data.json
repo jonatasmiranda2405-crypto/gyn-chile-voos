@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11T19:35:50+00:00",
+  "updated": "2026-11-12T07:10:37+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -14,11 +14,11 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 485,
-          "price": 1013,
+          "price": 1015,
           "sellers": [
             {
               "seller": "LATAM",
-              "price": 1013
+              "price": 1015
             }
           ]
         }
@@ -37,7 +37,7 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 455,
-          "price": 1220
+          "price": 1216
         },
         {
           "airline": "LATAM + Turkish Airlines",
@@ -47,7 +47,7 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 810,
-          "price": 1969
+          "price": 1961
         }
       ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
@@ -623,6 +623,13 @@
       "after": "19:30",
       "GYN": 1013,
       "BSB": 1220
+    },
+    {
+      "when": "2026-11-12T07:10:37+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1015,
+      "BSB": 1216
     }
   ],
   "query": {
