@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14T06:23:32+00:00",
+  "updated": "2026-11-14T18:01:38+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -14,13 +14,7 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 485,
-          "price": 1278,
-          "sellers": [
-            {
-              "seller": "LATAM",
-              "price": 1278
-            }
-          ]
+          "price": 1278
         }
       ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDR1lOcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
@@ -654,6 +648,13 @@
     },
     {
       "when": "2026-11-14T06:23:32+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1278,
+      "BSB": 1291
+    },
+    {
+      "when": "2026-11-14T18:01:38+00:00",
       "date": "2026-12-11",
       "after": "19:30",
       "GYN": 1278,
