@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T06:30:00+00:00",
+  "updated": "2026-11-16T22:01:46+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -37,17 +37,7 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 455,
-          "price": 1291
-        },
-        {
-          "airline": "LATAM",
-          "flights": "LA 3780 LA 786",
-          "dep": "2026-12-11 21:45",
-          "arr": "2026-12-12 15:40",
-          "stops": 1,
-          "via": "GIG",
-          "duration_min": 1075,
-          "price": 1653
+          "price": 1268
         },
         {
           "airline": "Gol + Turkish Airlines",
@@ -696,6 +686,13 @@
       "after": "19:30",
       "GYN": 1278,
       "BSB": 1291
+    },
+    {
+      "when": "2026-11-16T22:01:46+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1278,
+      "BSB": 1268
     }
   ],
   "query": {
