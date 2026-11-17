@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T07:55:10+00:00",
+  "updated": "2026-11-17T20:55:27+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -19,6 +19,54 @@
             {
               "seller": "LATAM",
               "price": 1295
+            },
+            {
+              "seller": "Booking.com",
+              "price": 1295
+            },
+            {
+              "seller": "OurTrip",
+              "price": 1320
+            },
+            {
+              "seller": "Zupper",
+              "price": 1327
+            },
+            {
+              "seller": "ViajaNet",
+              "price": 1346
+            },
+            {
+              "seller": "Decolar",
+              "price": 1347
+            },
+            {
+              "seller": "Expedia",
+              "price": 1352
+            },
+            {
+              "seller": "Mytrip",
+              "price": 1359
+            },
+            {
+              "seller": "Gotogate",
+              "price": 1359
+            },
+            {
+              "seller": "Flightnetwork",
+              "price": 1359
+            },
+            {
+              "seller": "Trip.com",
+              "price": 1360
+            },
+            {
+              "seller": "maxmilhas",
+              "price": 1411
+            },
+            {
+              "seller": "Kiwi.com",
+              "price": 2140
             }
           ]
         }
@@ -38,26 +86,6 @@
           "via": "GRU",
           "duration_min": 455,
           "price": 1285
-        },
-        {
-          "airline": "LATAM",
-          "flights": "LA 3780 LA 786",
-          "dep": "2026-12-11 21:45",
-          "arr": "2026-12-12 15:40",
-          "stops": 1,
-          "via": "GIG",
-          "duration_min": 1075,
-          "price": 1675
-        },
-        {
-          "airline": "LATAM",
-          "flights": "LA 3384 LA 715",
-          "dep": "2026-12-11 20:45",
-          "arr": "2026-12-12 11:15",
-          "stops": 1,
-          "via": "VCP",
-          "duration_min": 870,
-          "price": 1846
         },
         {
           "airline": "Gol + Turkish Airlines",
@@ -716,6 +744,13 @@
     },
     {
       "when": "2026-11-17T07:55:10+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1295,
+      "BSB": 1285
+    },
+    {
+      "when": "2026-11-17T20:55:27+00:00",
       "date": "2026-12-11",
       "after": "19:30",
       "GYN": 1295,
