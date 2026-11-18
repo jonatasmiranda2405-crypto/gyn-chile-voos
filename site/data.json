@@ -1,72 +1,72 @@
 {
-  "updated": "2026-11-18T07:28:51+00:00",
+  "updated": "2026-11-18T20:31:24+00:00",
   "message": "",
   "routes": {
     "GYN": {
       "status": "ok",
-      "message": "Falha na última busca: Google Flights hasn't returned any results for this query.",
+      "message": "",
       "offers": [
         {
           "airline": "LATAM",
           "flights": "LA 3545 LA 763",
-          "dep": "2026-12-11 20:00",
+          "dep": "2026-12-11 19:55",
           "arr": "2026-12-12 04:05",
           "stops": 1,
           "via": "GRU",
-          "duration_min": 485,
-          "price": 1295,
+          "duration_min": 490,
+          "price": 1305,
           "sellers": [
             {
               "seller": "LATAM",
-              "price": 1295
+              "price": 1305
             },
             {
               "seller": "Booking.com",
-              "price": 1295
+              "price": 1308
             },
             {
               "seller": "OurTrip",
-              "price": 1320
+              "price": 1331
             },
             {
               "seller": "Zupper",
-              "price": 1327
-            },
-            {
-              "seller": "ViajaNet",
-              "price": 1346
-            },
-            {
-              "seller": "Decolar",
-              "price": 1347
-            },
-            {
-              "seller": "Expedia",
-              "price": 1352
-            },
-            {
-              "seller": "Mytrip",
-              "price": 1359
-            },
-            {
-              "seller": "Gotogate",
-              "price": 1359
-            },
-            {
-              "seller": "Flightnetwork",
-              "price": 1359
+              "price": 1338
             },
             {
               "seller": "Trip.com",
-              "price": 1360
+              "price": 1354
+            },
+            {
+              "seller": "ViajaNet",
+              "price": 1357
+            },
+            {
+              "seller": "Decolar",
+              "price": 1358
+            },
+            {
+              "seller": "Expedia",
+              "price": 1363
+            },
+            {
+              "seller": "Gotogate",
+              "price": 1371
+            },
+            {
+              "seller": "Mytrip",
+              "price": 1371
+            },
+            {
+              "seller": "Flightnetwork",
+              "price": 1371
             },
             {
               "seller": "maxmilhas",
-              "price": 1411
+              "price": 1423
             },
             {
               "seller": "Kiwi.com",
-              "price": 2140
+              "price": 2245
             }
           ]
         }
@@ -85,7 +85,7 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 455,
-          "price": 1295
+          "price": 1463
         },
         {
           "airline": "Gol + Turkish Airlines",
@@ -762,6 +762,13 @@
       "after": "19:30",
       "GYN": null,
       "BSB": 1295
+    },
+    {
+      "when": "2026-11-18T20:31:24+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1305,
+      "BSB": 1463
     }
   ],
   "query": {
