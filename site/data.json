@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T20:31:24+00:00",
+  "updated": "2026-11-19T07:25:43+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -14,59 +14,11 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 490,
-          "price": 1305,
+          "price": 1311,
           "sellers": [
             {
               "seller": "LATAM",
-              "price": 1305
-            },
-            {
-              "seller": "Booking.com",
-              "price": 1308
-            },
-            {
-              "seller": "OurTrip",
-              "price": 1331
-            },
-            {
-              "seller": "Zupper",
-              "price": 1338
-            },
-            {
-              "seller": "Trip.com",
-              "price": 1354
-            },
-            {
-              "seller": "ViajaNet",
-              "price": 1357
-            },
-            {
-              "seller": "Decolar",
-              "price": 1358
-            },
-            {
-              "seller": "Expedia",
-              "price": 1363
-            },
-            {
-              "seller": "Gotogate",
-              "price": 1371
-            },
-            {
-              "seller": "Mytrip",
-              "price": 1371
-            },
-            {
-              "seller": "Flightnetwork",
-              "price": 1371
-            },
-            {
-              "seller": "maxmilhas",
-              "price": 1423
-            },
-            {
-              "seller": "Kiwi.com",
-              "price": 2245
+              "price": 1311
             }
           ]
         }
@@ -85,7 +37,17 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 455,
-          "price": 1463
+          "price": 1382
+        },
+        {
+          "airline": "LATAM",
+          "flights": "LA 3780 LA 786",
+          "dep": "2026-12-11 21:45",
+          "arr": "2026-12-12 15:40",
+          "stops": 1,
+          "via": "GIG",
+          "duration_min": 1075,
+          "price": 1865
         },
         {
           "airline": "Gol + Turkish Airlines",
@@ -95,7 +57,7 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 745,
-          "price": 2180
+          "price": 1969
         }
       ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
@@ -769,6 +731,13 @@
       "after": "19:30",
       "GYN": 1305,
       "BSB": 1463
+    },
+    {
+      "when": "2026-11-19T07:25:43+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1311,
+      "BSB": 1382
     }
   ],
   "query": {
