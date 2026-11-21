@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T07:08:04+00:00",
+  "updated": "2026-11-21T19:15:51+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -19,50 +19,6 @@
             {
               "seller": "LATAM",
               "price": 1409
-            },
-            {
-              "seller": "Booking.com",
-              "price": 1409
-            },
-            {
-              "seller": "Zupper",
-              "price": 1431
-            },
-            {
-              "seller": "OurTrip",
-              "price": 1436
-            },
-            {
-              "seller": "Trip.com",
-              "price": 1437
-            },
-            {
-              "seller": "ViajaNet",
-              "price": 1466
-            },
-            {
-              "seller": "Decolar",
-              "price": 1467
-            },
-            {
-              "seller": "Expedia",
-              "price": 1468
-            },
-            {
-              "seller": "Mytrip",
-              "price": 1480
-            },
-            {
-              "seller": "Gotogate",
-              "price": 1480
-            },
-            {
-              "seller": "Flightnetwork",
-              "price": 1480
-            },
-            {
-              "seller": "maxmilhas",
-              "price": 1533
             }
           ]
         }
@@ -81,7 +37,7 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 455,
-          "price": 1629
+          "price": 1599
         },
         {
           "airline": "Gol + Turkish Airlines",
@@ -101,7 +57,7 @@
           "stops": 2,
           "via": "GRU, AEP",
           "duration_min": 1245,
-          "price": 2185
+          "price": 2124
         }
       ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
@@ -810,6 +766,13 @@
       "after": "19:30",
       "GYN": 1409,
       "BSB": 1629
+    },
+    {
+      "when": "2026-11-21T19:15:51+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1409,
+      "BSB": 1599
     }
   ],
   "query": {
