@@ -1,11 +1,28 @@
 {
-  "updated": "2026-11-22T06:48:16+00:00",
+  "updated": "2026-11-22T19:40:12+00:00",
   "message": "",
   "routes": {
     "GYN": {
       "status": "ok",
       "message": "",
-      "offers": [],
+      "offers": [
+        {
+          "airline": "LATAM",
+          "flights": "LA 3545 LA 763",
+          "dep": "2026-12-11 19:55",
+          "arr": "2026-12-12 04:05",
+          "stops": 1,
+          "via": "GRU",
+          "duration_min": 490,
+          "price": 1409,
+          "sellers": [
+            {
+              "seller": "LATAM",
+              "price": 1409
+            }
+          ]
+        }
+      ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDR1lOcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
     },
     "BSB": {
@@ -752,6 +769,13 @@
       "date": "2026-12-11",
       "after": "19:30",
       "GYN": null,
+      "BSB": 1599
+    },
+    {
+      "when": "2026-11-22T19:40:12+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1409,
       "BSB": 1599
     }
   ],
