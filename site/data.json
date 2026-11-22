@@ -1,28 +1,11 @@
 {
-  "updated": "2026-11-21T19:15:51+00:00",
+  "updated": "2026-11-22T06:48:16+00:00",
   "message": "",
   "routes": {
     "GYN": {
       "status": "ok",
       "message": "",
-      "offers": [
-        {
-          "airline": "LATAM",
-          "flights": "LA 3545 LA 763",
-          "dep": "2026-12-11 19:55",
-          "arr": "2026-12-12 04:05",
-          "stops": 1,
-          "via": "GRU",
-          "duration_min": 490,
-          "price": 1409,
-          "sellers": [
-            {
-              "seller": "LATAM",
-              "price": 1409
-            }
-          ]
-        }
-      ],
+      "offers": [],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDR1lOcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
     },
     "BSB": {
@@ -48,16 +31,6 @@
           "via": "GRU",
           "duration_min": 745,
           "price": 1994
-        },
-        {
-          "airline": "Gol + Aerolineas Argentinas",
-          "flights": "G3 1459 AR 1243 AR 1284",
-          "dep": "2026-12-11 21:35",
-          "arr": "2026-12-12 18:20",
-          "stops": 2,
-          "via": "GRU, AEP",
-          "duration_min": 1245,
-          "price": 2124
         }
       ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
@@ -772,6 +745,13 @@
       "date": "2026-12-11",
       "after": "19:30",
       "GYN": 1409,
+      "BSB": 1599
+    },
+    {
+      "when": "2026-11-22T06:48:16+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": null,
       "BSB": 1599
     }
   ],
