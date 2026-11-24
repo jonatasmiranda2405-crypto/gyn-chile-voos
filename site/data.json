@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T09:54:24+00:00",
+  "updated": "2026-11-24T22:26:49+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -14,11 +14,15 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 490,
-          "price": 1344,
+          "price": 1350,
           "sellers": [
             {
               "seller": "LATAM",
-              "price": 1344
+              "price": 1350
+            },
+            {
+              "seller": "Trip.com",
+              "price": 1473
             }
           ]
         }
@@ -37,7 +41,7 @@
           "stops": 1,
           "via": "GRU",
           "duration_min": 455,
-          "price": 1746
+          "price": 1799
         },
         {
           "airline": "Gol + Turkish Airlines",
@@ -798,6 +802,13 @@
       "after": "19:30",
       "GYN": 1344,
       "BSB": 1746
+    },
+    {
+      "when": "2026-11-24T22:26:49+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1350,
+      "BSB": 1799
     }
   ],
   "query": {
