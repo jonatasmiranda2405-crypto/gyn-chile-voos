@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T08:17:58+00:00",
+  "updated": "2026-11-26T21:31:46+00:00",
   "message": "",
   "routes": {
     "GYN": {
@@ -18,11 +18,7 @@
           "sellers": [
             {
               "seller": "LATAM",
-              "price": 1325
-            },
-            {
-              "seller": "Trip.com",
-              "price": 1463
+              "price": 1408
             }
           ]
         }
@@ -34,6 +30,26 @@
       "message": "",
       "offers": [
         {
+          "airline": "LATAM",
+          "flights": "LA 3384 LA 709",
+          "dep": "2026-12-11 20:45",
+          "arr": "2026-12-12 11:15",
+          "stops": 1,
+          "via": "VCP",
+          "duration_min": 870,
+          "price": 1486
+        },
+        {
+          "airline": "LATAM",
+          "flights": "LA 3780 LA 786",
+          "dep": "2026-12-11 21:45",
+          "arr": "2026-12-12 15:40",
+          "stops": 1,
+          "via": "GIG",
+          "duration_min": 1075,
+          "price": 1887
+        },
+        {
           "airline": "Gol + Turkish Airlines",
           "flights": "G3 1459 TK 215",
           "dep": "2026-12-11 21:35",
@@ -42,6 +58,16 @@
           "via": "GRU",
           "duration_min": 745,
           "price": 1992
+        },
+        {
+          "airline": "LATAM",
+          "flights": "LA 4622 LA 763",
+          "dep": "2026-12-11 20:30",
+          "arr": "2026-12-12 04:05",
+          "stops": 1,
+          "via": "GRU",
+          "duration_min": 455,
+          "price": 2080
         }
       ],
       "google_flights_url": "https://www.google.com/travel/flights?hl=pt&gl=br&curr=BRL&tfs=CBwQAhoeEgoyMDI2LTEyLTExagcIARIDQlNCcgcIARIDU0NMQAFIAXABmAEC&tfu=EgIIAQ"
@@ -820,6 +846,13 @@
       "after": "19:30",
       "GYN": 1325,
       "BSB": 1992
+    },
+    {
+      "when": "2026-11-26T21:31:46+00:00",
+      "date": "2026-12-11",
+      "after": "19:30",
+      "GYN": 1325,
+      "BSB": 1486
     }
   ],
   "query": {
